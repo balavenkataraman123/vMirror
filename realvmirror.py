@@ -102,8 +102,6 @@ def get_score(preference, target):
     # score += linWeight / math.sqrt(sum)
 
     return score
-
-
 def get_most_relevant_prod(currPreference, indices):
     scores = []
 
@@ -127,11 +125,7 @@ class DataObject:
         self.prod_idx = 0
         self.inds = list(range(nTestRounds + 1, nRows))
         self.current_preference = {}
-
-
 currData = DataObject()
-
-
 def swiped(direction):
     if currData.prod_idx <= 10:
 
@@ -176,10 +170,6 @@ def swiped(direction):
 # ---------------------------------------
 
 
-
-
-
-
 def swipe(difference):
     if difference > 0:
         print('left swipe')
@@ -188,12 +178,6 @@ def swipe(difference):
     else:
         print("right swipe")
         swiped("RIGHT")
-
-
-
-
-
-
 def vswipe(difference):
     if difference < 0:
         print('up swipe')
@@ -256,6 +240,7 @@ def crop(img, pts):
     pts[:, 0] -= x
     pts[:, 1] -= y
     return img_cropped, pts
+
 
 
 def warp(img1, img2, pts1, pts2):
